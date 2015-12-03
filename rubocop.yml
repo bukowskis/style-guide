@@ -152,7 +152,7 @@ Lint/ShadowingOuterLocalVariable:
 Lint/SpaceBeforeFirstArg:
   Description: Put a space between a method name and the first argument in a method
     call without parentheses.
-  Enabled: true
+  Enabled: false
 Lint/StringConversionInInterpolation:
   Description: Checks for Object#to_s usage in string interpolation.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-to-s
