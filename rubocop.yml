@@ -19,6 +19,7 @@ AllCops:
   Exclude:
   - vendor/**/*
   - db/schema.rb
+  - db/migrate/*
   - config/routes.rb
   RunRailsCops: false
   DisplayCopNames: false
