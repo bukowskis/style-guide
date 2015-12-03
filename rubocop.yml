@@ -636,7 +636,7 @@ Style/EmptyLinesAroundClassBody:
   - empty_lines
   - no_empty_lines
   Description: Keeps track of empty lines around class bodies.
-  Enabled: true
+  Enabled: false
 Style/EmptyLinesAroundMethodBody:
   Description: Keeps track of empty lines around method bodies.
   Enabled: true
