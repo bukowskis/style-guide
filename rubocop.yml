@@ -677,7 +677,7 @@ Style/FileName:
   Exclude: []
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
-  Enabled: true
+  Enabled: false
 Style/FirstParameterIndentation:
   EnforcedStyle: special_for_inner_method_call_in_parentheses
   SupportedStyles:
