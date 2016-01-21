@@ -982,7 +982,7 @@ Style/RedundantReturn:
 Style/RedundantSelf:
   Description: Don't use self where it's not needed.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-self-unless-required
-  Enabled: true
+  Enabled: false
 Style/RegexpLiteral:
   EnforcedStyle: slashes
   SupportedStyles:
