@@ -881,7 +881,7 @@ Style/NumericLiterals:
   MinDigits: 5
   Description: Add underscores to large numeric literals to improve their readability.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
-  Enabled: true
+  Enabled: false
 Style/OneLineConditional:
   Description: Favor the ternary operator(?:) over if/then/else/end constructs.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#ternary-operator
