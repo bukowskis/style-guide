@@ -21,7 +21,6 @@ AllCops:
   - db/schema.rb
   - db/migrate/*
   - config/routes.rb
-  RunRailsCops: false
   DisplayCopNames: false
   DisplayStyleGuide: false
   ExtraDetails: false
@@ -30,6 +29,10 @@ AllCops:
   UseCache: true
   MaxFilesInCache: 20000
   CacheRootDirectory: "/tmp"
+
+Rails:
+  Enabled: false
+
 Lint/AmbiguousOperator:
   Description: Checks for ambiguous operators in the first argument of a method invocation
     without parentheses.
@@ -306,11 +309,6 @@ Rails/Date:
   - flexible
   Description: Checks the correct usage of date aware methods, such as Date.today,
     Date.current etc.
-  Enabled: true
-Rails/DefaultScope:
-  Include:
-  - app/models/**/*.rb
-  Description: Checks if the argument passed to default_scope is a block.
   Enabled: true
 Rails/Delegate:
   Description: Prefer delegate method for delegations.
@@ -1035,7 +1033,7 @@ Style/SingleLineMethods:
   Description: Avoid single-line methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-single-line-methods
   Enabled: true
-Style/SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Description: Checks that exactly one space is used between a method name and the
     first argument for method calls without parentheses.
   Enabled: false
@@ -1047,7 +1045,7 @@ Style/SpaceAfterComma:
   Description: Use spaces after commas.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
   Enabled: true
-Style/SpaceAfterControlKeyword:
+Style/SpaceAroundKeyword:
   Description: Use spaces after if/elsif/unless/while/until/case/when.
   Enabled: true
 Style/SpaceAfterMethodName:
@@ -1080,12 +1078,7 @@ Style/SpaceAroundEqualsInParameterDefault:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-around-equals
   Enabled: true
 Style/SpaceAroundOperators:
-  MultiSpaceAllowedForOperators:
-  - "="
-  - "=>"
-  - "||"
-  Description: Use a single space around operators.
-  StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-operators
+  AllowForAlignment:
   Enabled: true
 Style/SpaceBeforeBlockBraces:
   EnforcedStyle: space
@@ -1099,9 +1092,6 @@ Style/SpaceBeforeComma:
   Enabled: true
 Style/SpaceBeforeComment:
   Description: Checks for missing space between code and a comment on the same line.
-  Enabled: true
-Style/SpaceBeforeModifierKeyword:
-  Description: Put a space before the modifier keyword.
   Enabled: true
 Style/SpaceBeforeSemicolon:
   Description: No spaces before semicolons.
@@ -1287,4 +1277,4 @@ Style/WordArray:
   WordRegex: !ruby/regexp /\A[\p{Word}]+\z/
   Description: Use %w or %W for arrays of words.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#percent-w
-  unabled: true
+  Enabled: true
