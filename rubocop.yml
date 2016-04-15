@@ -29,6 +29,7 @@ AllCops:
   UseCache: true
   MaxFilesInCache: 20000
   CacheRootDirectory: "/tmp"
+  TargetRubyVersion: 2.1
 
 Rails:
   Enabled: false
@@ -1078,7 +1079,7 @@ Style/SpaceAroundEqualsInParameterDefault:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-around-equals
   Enabled: true
 Style/SpaceAroundOperators:
-  AllowForAlignment:
+  AllowForAlignment: true
   Enabled: true
 Style/SpaceBeforeBlockBraces:
   EnforcedStyle: space
@@ -1155,7 +1156,7 @@ Style/StringLiterals:
   - double_quotes
   Description: Checks if uses of quotes match the configured preference.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
-  Enabled: false 
+  Enabled: false
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: single_quotes
   SupportedStyles:
