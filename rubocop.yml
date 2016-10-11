@@ -1,7 +1,3 @@
-# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# Beware if you change this file on your own, this is a team effort :)
-# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
 # A note on how to override the Rubocop defaults:
 # -> Hashes are *merged* with upstream defaults.
 # -> Arrays are *overwritten* with our definition.
@@ -27,6 +23,10 @@ AllCops:
     # Migrations are run once and never touched again.
     # Where there is no need for maintenance, there is no need for proper coding style.
     - db/migrate/*
+
+    # It so happens that we use Ruby in some Node projects.
+    # Let us avoid analyzing vendor ruby code that we do not control.
+    - node_modules/**/*
 
 # –––––––––––––––––––––––––––––––––––––––––––
 # Please try to keep this list alphabetically
@@ -65,7 +65,18 @@ Style/EmptyLinesAroundClassBody:
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
+# When dealing with a lot of numbers, it can be cumbersome to add a lot of `_`.
+# You may use `_` if you like, but it does not 100% add readability so we skip it.
+Style/NumericLiterals
+  Enabled: false
+
 # Excessive use of `self.` is just noise. But we don't generally forbid using it.
 # See also https://github.com/bukowskis/style-guide/commit/9d1cad9d29c2064defd713386897591e8fb8f1be
 Style/RedundantSelf:
   Enabled: false
+
+# The ruby style guide cannot even agree on a standard for this.
+# So we better disable this cop as it usually leads to too much discussion.
+Style/StringLiterals
+  Enabled: false
+
