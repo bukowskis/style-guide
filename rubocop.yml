@@ -85,3 +85,7 @@ Style/RedundantSelf:
 Style/StringLiterals:
   Enabled: false
 
+# Admit that you too copy paste rows in a Hash.
+# To prevent micro-managing the commas, we allow a trailing coma even in the last row.
+Style/TrailingCommaInLiteral:
+  Enabled: false
