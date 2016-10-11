@@ -67,12 +67,12 @@ Style/EmptyLinesAroundModuleBody:
 
 # `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
 # It is not so obscure enough that we would forbid it, though.
-Style/LambdaCall
+Style/LambdaCall:
   Enabled: false
 
 # When dealing with a lot of numbers, it can be cumbersome to add a lot of `_`.
 # You may use `_` if you like, but it does not 100% add readability so we skip it.
-Style/NumericLiterals
+Style/NumericLiterals:
   Enabled: false
 
 # Excessive use of `self.` is just noise. But we don't generally forbid using it.
@@ -82,6 +82,6 @@ Style/RedundantSelf:
 
 # The ruby style guide cannot even agree on a standard for this.
 # So we better disable this cop as it usually leads to too much discussion.
-Style/StringLiterals
+Style/StringLiterals:
   Enabled: false
 
