@@ -65,6 +65,12 @@ Style/EmptyLinesAroundClassBody:
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
+# This is a "heads-up" for Ruby 3.0.
+# It only makes sense in Ruby >= 2.3, which we seldom use yet.
+# But if we do, we don't want this to break yet, it's not probably mature enough either.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 # `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
 # It is not so obscure enough that we would forbid it, though.
 Style/LambdaCall:
