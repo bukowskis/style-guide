@@ -44,12 +44,12 @@ Performance/FixedSize:
 
 # Using `#reverse_each` is mentally a little more challenging than just
 # a simple `reverse.each`. The latter is not really much faster anyway.
-Performance/ReverseEach
+Performance/ReverseEach:
   Enabled: false
 
 # Of course you should use `#delete` to remove characters from a String.
 # But we don't want to enforce you to use the non-intuitive `#tr` instead of `#gsub`
-Performance/StringReplacement
+Performance/StringReplacement:
   Enabled: false
 
 # Top-level class documentation is cumbersome when starting/spiking a new project.
