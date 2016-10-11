@@ -65,6 +65,11 @@ Style/EmptyLinesAroundClassBody:
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
+# `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
+# It is not so obscure enough that we would forbid it, though.
+Style/LambdaCall
+  Enabled: false
+
 # When dealing with a lot of numbers, it can be cumbersome to add a lot of `_`.
 # You may use `_` if you like, but it does not 100% add readability so we skip it.
 Style/NumericLiterals
