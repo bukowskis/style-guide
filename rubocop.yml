@@ -32,6 +32,10 @@ AllCops:
 # Please try to keep this list alphabetically
 # –––––––––––––––––––––––––––––––––––––––––––
 
+# 80 characters can sometimes cause weird line breaks that make code less readable.
+Metrics/LineLength:
+  Max: 100
+
 # This is a pure performance immprovement without any other positive side-effects.
 # We're willing to accept the performance penalty favoring code readability.
 Performance/CaseWhenSplat:
