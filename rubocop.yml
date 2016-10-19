@@ -62,6 +62,11 @@ Performance/StringReplacement:
 Style/Documentation:
   Enabled: false
 
+# Leading dots make it more readable that we are dealing with a method call.
+# This is the default but hound overrides it if we don't explicitely specify it.
+Style/DotPosition:
+  EnforcedStyle: leading
+
 # An empty line below `class` and `module` can increase readability in many cases.
 # For now, we allow this rule, but it's certainly open for discussion.
 Style/EmptyLinesAroundClassBody:
