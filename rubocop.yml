@@ -56,6 +56,11 @@ Performance/ReverseEach:
 Performance/StringReplacement:
   Enabled: false
 
+# UTF-8 ––––– in comments can improve readability ✔
+# It's allowed as method names, so maybe it should be allowed as comment.
+Style/AsciiComments:
+  Enabled: false
+
 # Top-level class documentation is cumbersome when starting/spiking a new project.
 # Generally our code should be understandable without comments.
 # Also, there are too many legacy classes without documentation that should not break rubocop.
