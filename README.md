@@ -7,9 +7,9 @@ These are the coding style conventions we adhere to.
 Install these gems:
 
 ```bash
-gem install pronto
 gem install pronto-rubocop
 gem install pronto-scss
+gem install pronto-slim
 ```
 
 Create a `.rubocop.yml` in every repository with this content:
@@ -18,11 +18,19 @@ Create a `.rubocop.yml` in every repository with this content:
 echo "inherit_from: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml" > .rubocop.yml
 ```
 
-Symlink `.scss-lint.yml` to your `$HOME` directory:
+Copy `.scss-lint.yml` to your code repository it in sync with this repository.
+And wait for https://github.com/mmozuras/pronto-scss/issues/6 to be solved.
 
 ```bash
 # Provided your current directory is this repository
-ln -s scss-lint.yml ~/.scss-lint.yml
+cp scss-lint.yml PATH/TO/YOUR/CODE/REPO/.scss-lint.yml
+```
+
+Copy `.slim-lint.yml` to your `$HOME` directory and keep it in sync with this repository.
+
+```bash
+# Provided your current directory is this repository
+cp slim-lint.yml ~/.slim-lint.yml
 ```
 
 ## Usage
