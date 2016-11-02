@@ -1,0 +1,8 @@
+# Please try to keep this file alphabetically.
+
+linters:
+
+  # In Ruby we allow 100 characters per row.
+  # So it should be the same in our templates as well.
+  LineLength:
+    max: 100
