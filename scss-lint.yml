@@ -1,6 +1,8 @@
 # The default configuration can be modified below.
 # See https://github.com/brigade/scss-lint/blob/master/config/default.yml
 
+# Please try to keep this file alphabetically.
+
 linters:
 
   # We agree that it is better for the eye to see 0.4 instead of just .4
