@@ -40,6 +40,10 @@ changes compared to master.
 
 ```bash
 pronto run
+
+# You can also just run one type of linter
+pronto run -r rubocop
+pronto run -r scss
 ```
 
 If you have not commited your changes yet, you can use the following command to lint
