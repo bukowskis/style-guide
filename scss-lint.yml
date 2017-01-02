@@ -14,7 +14,6 @@ linters:
   # It would be chaotic to allow attributes to be sorted arbitrarily.
   # Concentric makes sense, because it focuses on importance of the attribute.
   PropertySortOrder:
-    separate_groups: true
     order: concentric
 
   # This enables us to use underscores in BEM-style classes
