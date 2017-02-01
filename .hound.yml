@@ -1,0 +1,10 @@
+ruby:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml
+scss:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/scss-lint.yml
+javascript:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/.jshintrc
+coffeescript:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/coffeelint.json
+
+fail_on_violations: true
