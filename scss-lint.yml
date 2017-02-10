@@ -18,10 +18,11 @@ linters:
 
   # This enables us to use underscores in BEM-style classes
   SelectorFormat:
-    enabled: false
+    enabled: true
+    convention: BEM
 
   # We enforce single quotes in rubocop, and it's the default in scss-lint
   # This overrides the double quote default in hounds' config file
   StringQuotes:
     enabled: true
-    style: single_quotes 
+    style: single_quotes
