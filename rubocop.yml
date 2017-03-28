@@ -5,7 +5,7 @@
 AllCops:
 
   # Keep this up-to-date with the Ruby version we use in Production.
-  TargetRubyVersion: 2.3.1
+  TargetRubyVersion: 2.3
 
   # By default Rubocop checks every .rb recursively inside the current directory.
   # We want to exclude some files, so let's modify the original Array.
@@ -99,4 +99,3 @@ Style/RedundantSelf:
 # So we better disable this cop as it usually leads to too much discussion.
 Style/StringLiterals:
   Enabled: false
-
