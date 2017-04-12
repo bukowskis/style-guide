@@ -36,6 +36,17 @@ AllCops:
 Metrics/LineLength:
   Max: 100
 
+# Less fuss about specs, these are even turned off for rubocops own
+# specs.
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*.rb
+
 # This is a pure performance immprovement without any other positive side-effects.
 # We're willing to accept the performance penalty favoring code readability.
 Performance/CaseWhenSplat:
