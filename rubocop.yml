@@ -35,12 +35,17 @@ AllCops:
 # 80 characters can sometimes cause weird line breaks that make code less readable.
 Metrics/LineLength:
   Max: 100
-  Exclude:
-    - spec/**/*_spec.rb
+
+# Less fuss about specs, these are even turned off for rubocops own
+# specs.
 
 Metrics/BlockLength:
   Exclude:
-    - spec/**/*_spec.rb
+    - spec/**/*.rb
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*.rb
 
 # This is a pure performance immprovement without any other positive side-effects.
 # We're willing to accept the performance penalty favoring code readability.
