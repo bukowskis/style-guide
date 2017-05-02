@@ -42,10 +42,12 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
+    - spec_legacy/**/*.rb
 
 Metrics/ModuleLength:
   Exclude:
     - spec/**/*.rb
+    - spec_legacy/**/*.rb
 
 # This is a pure performance immprovement without any other positive side-effects.
 # We're willing to accept the performance penalty favoring code readability.
