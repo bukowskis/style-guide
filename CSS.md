@@ -159,3 +159,32 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
     color: $orange
   ```
 
+## Fonts
+
+* Only use `.woff` because it has best compatibility with all browsers. We do not win much speed by *additionally* providing true type or woff2 for modern browsers but it adds complexity.
+
+## Colors
+
+* Give every color a prefix to distinguish them
+
+  ```scss
+  // bad
+  $warning: #f00
+  $headline: #333
+  $blue: #00f
+  
+  // good
+  $laurel-green: #070
+  $maroon-red: #a00
+  $carrot-orange: #f68a28
+  $moon-gray: #ddd
+  $snow-gray: #eee
+  ```
+  
+* Prefix corporate design colors with the company name
+
+  ```scss
+  // good
+  $bukowskis-granite-gray: #403f41
+  $bukowskis-rose-pink: #f9cfc7
+  ```
