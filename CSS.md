@@ -1,5 +1,15 @@
 # WIP PROPOSAL
 
+## Dependencies
+
+* Prefer SASS `@import` over Sprockets `require`, `require_tree`, and `require_self`
+  As per [this documentation](https://github.com/rails/sass-rails#important-note)
+
+  > DO NOT USE THEM IN YOUR SASS/SCSS FILES.
+  > They are very primitive and do not work well with Sass files.
+  > Instead, use Sass's native @import directive which sass-rails has customized to
+  > integrate with the conventions of your Rails projects.
+
 ## Spacing
 
 * Prefer spacing helpers over explicit size definitions, because it increases design consistency
@@ -24,13 +34,13 @@
   ```sass
   # bad
   height: 1.5em
-    
+
   # better
   height: 25px
 
   # good
   @include scale(height, 25px)
-  
+
   # exceptions allowed where it makes sense
   # and you want sizing relative to the parent
   small
@@ -47,14 +57,14 @@ We follow [this article](https://csswizardry.com/2015/03/more-transparent-ui-cod
   ```slim
   / bad
   a.js-trigger
-    
+
   / good
   a data-trigger=true
   ```
 
 ## BEM
 
-Consequently use BEM syntax as defined [here](http://getbem.com) and used [here](https://github.com/inuitcss/inuitcss) and blogged 
+Consequently use BEM syntax as defined [here](http://getbem.com) and used [here](https://github.com/inuitcss/inuitcss) and blogged
 
 
 * Do not nest CSS
@@ -64,14 +74,14 @@ Consequently use BEM syntax as defined [here](http://getbem.com) and used [here]
   # bad
   .nav-primary .nav-primary__item
     color: $snow-white
-  
+
   # good
   .nav-primary
 
     &__item
       color: $snow-white
   ```
-  
+
 * Avoid element descendants in BEM
   because it couples DOM too tightly to CSS
 
@@ -82,7 +92,7 @@ Consequently use BEM syntax as defined [here](http://getbem.com) and used [here]
       .block__elem1__elem2
         . block__elem1__elem2__elem3
 
-  
+
   / good
   .block
     .block__elem1
@@ -104,7 +114,7 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
   ```sass
   # bad
   !orange= #ff9900
-    
+
   # good
   $orange: #ff9900
   ```
@@ -116,12 +126,12 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
   # bad
   =shadow
     box-shadow: 4px
-    
+
   # good
   @mixin shadow
     box-shadow: 4px
   ```
-  
+
 * Prefer `@include` over `+`
   because it is more readable
 
@@ -129,7 +139,7 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
   # bad
   .hero
     +shadow
-    
+
   # good
   .hero
     @include shadow
@@ -172,7 +182,7 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
   $warning: #f00
   $headline: #333
   $blue: #00f
-  
+
   // good
   $laurel-green: #070
   $maroon-red: #a00
@@ -180,7 +190,7 @@ Apart from semicolons and winged brackets, we prefer SCSS syntax. See examples b
   $moon-gray: #ddd
   $snow-gray: #eee
   ```
-  
+
 * Prefix corporate design colors with the company name
 
   ```scss
