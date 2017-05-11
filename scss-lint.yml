@@ -11,11 +11,6 @@ linters:
   LeadingZero:
     style: include_zero
 
-  # Using BEM it quickly happens that you nest a little more than usual.
-  # See https://csswizardry.com/2016/11/nesting-your-bem/
-  NestingDepth:
-    max_depth: 4
-
   # It would be chaotic to allow attributes to be sorted arbitrarily.
   # Concentric makes sense, because it focuses on importance of the attribute.
   PropertySortOrder:
@@ -23,7 +18,8 @@ linters:
 
   # This enables us to use underscores in BEM-style classes
   SelectorFormat:
-    enabled: false
+    enabled: true
+    convention: hyphenated_BEM
 
   # We enforce single quotes in rubocop, and it's the default in scss-lint
   # This overrides the double quote default in hounds' config file
