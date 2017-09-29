@@ -2,8 +2,9 @@ ruby:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml
 scss:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/scss-lint.yml
-javascript:
-  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/.jshintrc
+eslint:
+  enabled: true
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/.eslintrc
 coffeescript:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/coffeelint.json
 
