@@ -35,6 +35,8 @@ AllCops:
 # 80 characters can sometimes cause weird line breaks that make code less readable.
 Metrics/LineLength:
   Max: 100
+  Exclude:
+    - config/routes.rb
 
 # Less fuss about specs, these are even turned off for rubocops own
 # specs.
@@ -43,6 +45,7 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
     - spec_legacy/**/*.rb
+    - config/routes.rb
 
 Metrics/ModuleLength:
   Exclude:
@@ -80,11 +83,13 @@ Style/AsciiComments:
 Style/Documentation:
   Enabled: false
 
-# An empty line below `class` and `module` can increase readability in many cases.
+# An empty line below `class`, `module` and blocks can increase readability in many cases.
 # For now, we allow this rule, but it's certainly open for discussion.
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
 # This is a "heads-up" for Ruby 3.0.
