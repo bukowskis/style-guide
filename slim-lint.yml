@@ -1,8 +1,11 @@
 # Please try to keep this file alphabetically.
-
 linters:
-
   # In Ruby we allow 100 characters per row.
   # So it should be the same in our templates as well.
   LineLength:
     max: 100
+  # Since we can't specify a ruby version on hound for slim-lint the rubocop linter
+  # fails to parse anything with a safe navigation operator
+  RuboCop:
+    enabled: false
+
