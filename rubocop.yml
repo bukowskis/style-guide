@@ -32,6 +32,16 @@ AllCops:
 # Please try to keep this list alphabetically
 # –––––––––––––––––––––––––––––––––––––––––––
 
+# We usually catch those in code reviews and this metric is causing
+# a lot of noise and false positives.
+Metrics/AbcSize:
+  Enabled: false
+
+# We usually catch those in code reviews and this metric is causing
+# a lot of noise and false positives.
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
 # 80 characters can sometimes cause weird line breaks that make code less readable.
 Metrics/LineLength:
   Max: 100
