@@ -53,13 +53,13 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Exclude:
-    - spec/**/*.rb
+    - **/spec/**/*.rb
     - spec_legacy/**/*.rb
-    - config/routes.rb
+    - **/config/routes.rb
 
 Metrics/ModuleLength:
   Exclude:
-    - spec/**/*.rb
+    - **/spec/**/*.rb
     - spec_legacy/**/*.rb
 
 # This flags ** and _ as false positives and creates noise. We are careful enough with
