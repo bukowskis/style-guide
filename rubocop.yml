@@ -100,15 +100,6 @@ Style/AsciiComments:
 Style/Documentation:
   Enabled: false
 
-# An empty line below `class`, `module` and blocks can increase readability in many cases.
-# For now, we allow this rule, but it's certainly open for discussion.
-Layout/EmptyLinesAroundClassBody:
-  Enabled: false
-Layout/EmptyLinesAroundModuleBody:
-  Enabled: false
-Layout/EmptyLinesAroundBlockBody:
-  Enabled: false
-
 # This is a "heads-up" for Ruby 3.0.
 # It only makes sense in Ruby >= 2.3, which we seldom use yet.
 # But if we do, we don't want this to break yet, it's not probably mature enough either.
