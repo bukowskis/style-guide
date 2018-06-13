@@ -54,7 +54,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
-    - lib/engines/**/spec/**/*.rb
+    - lib/**/spec/**/*.rb
     - spec_legacy/**/*.rb
     - config/routes.rb
 
