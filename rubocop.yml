@@ -2,6 +2,8 @@
 # -> Hashes are *merged* with upstream defaults.
 # -> Arrays are *overwritten* with our definition.
 
+require: rubocop-rspec
+
 AllCops:
 
   # Keep this up-to-date with the Ruby version we use in Production.
