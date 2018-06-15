@@ -91,6 +91,16 @@ Performance/ReverseEach:
 Performance/StringReplacement:
   Enabled: false
 
+# We follow https://robots.thoughtbot.com/lets-not
+# which increases example length.
+RSpec/ExampleLength:
+  Enabled: false
+
+# There is no compelling reason to limit `expect` to one per spec.
+# Especially in feature tests.
+RSpec/MultipleExpectations:
+  Enabled: false
+
 # UTF-8 ––––– in comments can improve readability ✔
 # It's allowed as method names, so maybe it should be allowed as comment.
 Style/AsciiComments:
