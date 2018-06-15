@@ -128,11 +128,6 @@ Style/NumericLiterals:
 Style/RedundantSelf:
   Enabled: false
 
-# The ruby style guide cannot even agree on a standard for this.
-# So we better disable this cop as it usually leads to too much discussion.
-Style/StringLiterals:
-  Enabled: false
-
 # This is a false positive when converting return values. To use this
 # for flow control would be questionable however that seems likely to
 # get noticed in code review.
