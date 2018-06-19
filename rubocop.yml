@@ -140,16 +140,6 @@ Style/NumericLiterals:
 Style/RedundantSelf:
   Enabled: false
 
-# We prefer single quotes except when it's not possible.
-Style/StringLiterals:
-  EnforcedStyle: single_quotes
-  SupportedStyles:
-    - single_quotes
-    - double_quotes
-  # If `true`, strings which span multiple lines using `\` for continuation must
-  # use the same type of quotes on each line.
-  ConsistentQuotesInMultiline: false
-
 # This is a false positive when converting return values. To use this
 # for flow control would be questionable however that seems likely to
 # get noticed in code review.
