@@ -34,6 +34,11 @@ AllCops:
 # Please try to keep this list alphabetically
 # –––––––––––––––––––––––––––––––––––––––––––
 
+# Using rspec methods such as 'it' for scenarios can result in weird phrasing.
+Capybara/FeatureMethods:
+  Description: Checks for consistent method usage in feature specs.
+  Enabled: false
+
 # We usually catch those in code reviews and this metric is causing
 # a lot of noise and false positives.
 Metrics/AbcSize:
