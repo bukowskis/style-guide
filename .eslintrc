@@ -1,13 +1,11 @@
 {
   "extends": [
-    "standard",
-    "plugin:react/recommended",
-    "plugin:jest/recommended"
+    "standard"
   ],
-  "rules": {
-    "semi": 0,
-    "react/jsx-uses-vars": [2],
-    "jsx-quotes": ["error", "prefer-double"]
+  "rules": { 
+    "semi": 0
   },
-  "plugins": ["jest"]
+  "env": {
+    "jquery": true
+  }
 }
