@@ -7,5 +7,10 @@ eslint:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/.eslintrc
 coffeescript:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/coffeelint.json
+haml:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/haml-lint.yml
+slim_lint:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/slim-lint.yml
+  enabled: true
 
 fail_on_violations: true
