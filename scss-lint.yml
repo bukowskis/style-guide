@@ -11,10 +11,11 @@ linters:
   LeadingZero:
     style: include_zero
 
-  # It would be chaotic to allow attributes to be sorted arbitrarily.
-  # Concentric makes sense, because it focuses on importance of the attribute.
+  # Disabled because hound uses an old version of scss-lint (0.38)
+  # whereas pronto uses the newer scss_lint and they can't be made to
+  # agree when this property is enabled.
   PropertySortOrder:
-    order: concentric
+    enabled: false
 
   # This enables us to use underscores in BEM-style classes
   SelectorFormat:
