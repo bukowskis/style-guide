@@ -106,6 +106,10 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+# We use nested groups to keep our context descriptions short.
+RSpec/NestedGroups:
+  Enabled: false
+
 # UTF-8 ––––– in comments can improve readability ✔
 # It's allowed as method names, so maybe it should be allowed as comment.
 Style/AsciiComments:
