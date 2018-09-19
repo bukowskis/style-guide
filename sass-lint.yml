@@ -26,10 +26,6 @@ rules:
   # Hound default is WARN.
   mixins-before-declarations: 0
 
-  # This is on WARN by default, but apparently Hound has it on DISABLE.
-  # So we disable it as well.
-  no-vendor-prefixes: 0
-
   # Disable order. Hound defaults to WARN and alphabetically.
   property-sort-order: 0
 
