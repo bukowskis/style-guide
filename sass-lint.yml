@@ -1,0 +1,37 @@
+# See http://help.houndci.com/configuration/sass-lint
+
+# Please try to keep this file alphabetically.
+
+rules:
+
+  # Enforce Harry Roberts BEM style
+  class-name-format:
+    - 2
+    -
+      convention: hyphenatedbem
+
+  # This is a common-sense rule that Hound has on WARN. We enforce it.
+  empty-line-between-blocks: 2
+
+  # We agree that it is better for the eye to see 0.4 instead of just .4
+  # So much so, that we enforce the leading zero to be used.
+  # Hound default is WARN.
+  leading-zero:
+    - 2
+    -
+      include: true
+
+  # @include declarations with inner @content don't have to come first.
+  # Disabling until https://github.com/sasstools/sass-lint/issues/455 is fixed
+  # Hound default is WARN.
+  mixins-before-declarations: 0
+
+  # Hound defaults to WARN and alphabetical order.
+  # We also only WARN, but with concentric order.
+  property-sort-order:
+    - 0
+    -
+      order: concentric
+
+  # This is a common-sense rule that Hound has on WARN. We enforce it.
+  single-line-per-selector: 2

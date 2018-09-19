@@ -1,6 +1,6 @@
 ruby:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml
-scss:
+sass-lint:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/scss-lint.yml
 eslint:
   enabled: true
