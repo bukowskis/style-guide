@@ -26,12 +26,8 @@ rules:
   # Hound default is WARN.
   mixins-before-declarations: 0
 
-  # Hound defaults to WARN and alphabetical order.
-  # We also only WARN, but with concentric order.
-  property-sort-order:
-    - 0
-    -
-      order: concentric
+  # Disable order. Hound defaults to WARN and alphabetically.
+  property-sort-order: 0
 
   # This is a common-sense rule that Hound has on WARN. We enforce it.
   single-line-per-selector: 2
