@@ -22,7 +22,7 @@
 * Avoid using third-party mixins directly
   because they make upgrading the library very hard
 
-  ```scss
+```scss
  // bad
   import foundation/util;
   import foundation/calc;
@@ -34,7 +34,7 @@
   @include my-responsive-wrapper(medium up) {
     color: $orange;
   }
-  ```
+```
 
 ## Mobile first
 
