@@ -26,6 +26,24 @@ rules:
   # Hound default is WARN.
   mixins-before-declarations: 0
 
+
+  # The following vendor prefixes are legitimate:
+  #
+  # -ms-grid-column
+  # -ms-grid-columns
+  # -ms-grid-column-span
+  # -ms-grid-row
+  # -ms-grid-rows
+  # -ms-grid-row-span
+  #
+  # Unforuntately sass-linter has no whitelist.
+  # However, we can allow every -ms-* property.
+  no-vendor-prefixes:
+  - 2
+  -
+    excluded-identifiers:
+      - ms
+
   # Disable order. Hound defaults to WARN and alphabetically.
   property-sort-order: 0
 
