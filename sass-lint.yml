@@ -36,7 +36,7 @@ rules:
   # -ms-grid-rows
   # -ms-grid-row-span
   #
-  # Unforuntately sass-linter has now whitelist.
+  # Unforuntately sass-linter has no whitelist.
   # However, we can allow every -ms-* property.
   no-vendor-prefixes:
   - 2
