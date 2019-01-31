@@ -20,11 +20,11 @@ AllCops:
 
     # We don't care much about auto-generated files.
     # There is no point in applying our style guide here.
-    - db/schema.rb
+    - **/db/schema.rb
 
     # Migrations are run once and never touched again.
     # Where there is no need for maintenance, there is no need for proper coding style.
-    - db/migrate/*
+    - **/db/migrate/*
 
     # It so happens that we use Ruby in some Node projects.
     # Let us avoid analyzing vendor ruby code that we do not control.
