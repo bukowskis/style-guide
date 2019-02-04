@@ -39,6 +39,10 @@ Capybara/FeatureMethods:
   Description: Checks for consistent method usage in feature specs.
   Enabled: false
 
+# Static attributes are removed in FactoryBot 5.0
+FactoryBot/StaticAttributeDefinedDynamically:
+  enabled: false
+
 # We usually catch those in code reviews and this metric is causing
 # a lot of noise and false positives.
 Metrics/AbcSize:
