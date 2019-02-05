@@ -13,6 +13,10 @@ rules:
   # This is a common-sense rule that Hound has on WARN. We enforce it.
   empty-line-between-blocks: 2
 
+  # Because of a long-standing bug we disable indentation checking.
+  # See https://github.com/sasstools/sass-lint/issues/591#issuecomment-314887197
+  indentation: 0
+
   # We agree that it is better for the eye to see 0.4 instead of just .4
   # So much so, that we enforce the leading zero to be used.
   # Hound default is WARN.
