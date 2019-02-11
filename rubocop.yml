@@ -43,6 +43,9 @@ Capybara/FeatureMethods:
 FactoryBot/StaticAttributeDefinedDynamically:
   enabled: false
 
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
 # We usually catch those in code reviews and this metric is causing
 # a lot of noise and false positives.
 Metrics/AbcSize:
