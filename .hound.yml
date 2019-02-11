@@ -15,3 +15,6 @@ slim_lint:
   enabled: true
 
 fail_on_violations: true
+
+rubocop:
+  version: 0.63.0
