@@ -1,20 +1,26 @@
-ruby:
-  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml
-sass-lint:
-  enabled: true
-  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/sass-lint.yml
+fail_on_violations: true
+
+# See http://help.houndci.com/configuration/supported-linters
+
+coffeescript:
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/coffeelint.json
+
 eslint:
   enabled: true
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/.eslintrc
-coffeescript:
-  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/coffeelint.json
+
 haml:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/haml-lint.yml
+
+rubocop:
+  version: 0.63.0
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/rubocop.yml
+
+sass-lint:
+  enabled: true
+  config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/sass-lint.yml
+
 slim_lint:
   config_file: https://raw.githubusercontent.com/bukowskis/style-guide/master/slim-lint.yml
   enabled: true
 
-fail_on_violations: true
-
-rubocop:
-  version: 0.63.0
