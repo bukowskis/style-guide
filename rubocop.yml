@@ -39,10 +39,6 @@ Capybara/FeatureMethods:
   Description: Checks for consistent method usage in feature specs.
   Enabled: false
 
-# Static attributes are removed in FactoryBot 5.0
-FactoryBot/StaticAttributeDefinedDynamically:
-  enabled: false
-
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
