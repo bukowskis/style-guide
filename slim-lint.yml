@@ -1,8 +1,8 @@
 # Please try to keep this file alphabetically.
 linters:
-  # BEM styles make lines longer
+  # This should suffice :-)
   LineLength:
-    max: 120
+    max: 299
   # Since we can't specify a ruby version on hound for slim-lint the rubocop linter
   # fails to parse anything with a safe navigation operator
   RuboCop:
