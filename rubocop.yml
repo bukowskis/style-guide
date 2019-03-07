@@ -111,6 +111,11 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+# MessageSpies should not be mandatory of preferred, it really depends
+# on the code being tested.
+RSpec/MessageSpies
+  Enabled: false
+
 # UTF-8 ––––– in comments can improve readability ✔
 # It's allowed as method names, so maybe it should be allowed as comment.
 Style/AsciiComments:
