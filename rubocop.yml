@@ -76,6 +76,9 @@ Metrics/ModuleLength:
     - lib/engines/**/spec/**/*.rb
     - spec_legacy/**/*.rb
 
+Naming/PredicateName:
+  Enabled: false
+
 # This flags ** and _ as false positives and creates noise. We are careful enough with
 # naming during code reviews that we don't need this
 Naming/UncommunicativeMethodParamName:
