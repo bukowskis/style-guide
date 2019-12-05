@@ -1,0 +1,12 @@
+#!/bin/bash
+
+project_name=${PWD##*/}
+
+get_container_id () {
+  docker container ls | grep style-guide_runner | cut -d ' ' -f 1
+}
+
+pushd ~/Projects/style-guide > /dev/null
+container_id=$([[ $(get_container_id) ]] || docker-compose up -d runner && get_container_id)
+docker exec -iw "/Projects/${project_name}" ${container_id} $* 2> /dev/null
+popd > /dev/null

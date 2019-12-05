@@ -6,10 +6,12 @@ x-shared: &shared
       dockerfile: ./Dockerfile
     tmpfs:
       - /tmp
+    volumes:
+      - ~/Projects:/Projects:cached
 
 services:
-  pronto:
+  runner:
     <<: *shared
     stdin_open: true
     tty: true
-    command: pronto help
+    command: /bin/bash

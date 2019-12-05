@@ -1,6 +1,3 @@
 #!/bin/bash
 
-PROJECT="$PWD"
-pushd ~/Projects/style-guide > /dev/null
-docker-compose run --rm -T -v "${PROJECT}:/code" -w /code pronto pronto $* 2> /dev/null
-popd > /dev/null
+exec $(dirname $0)/_command pronto $*
