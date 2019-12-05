@@ -1,0 +1,15 @@
+version: '3.4'
+
+x-shared: &shared
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tmpfs:
+      - /tmp
+
+services:
+  pronto:
+    <<: *shared
+    stdin_open: true
+    tty: true
+    command: pronto help

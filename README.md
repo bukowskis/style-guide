@@ -4,13 +4,7 @@ These are the coding style conventions we adhere to.
 
 ## Installation
 
-Install these gems:
-
-```bash
-gem install pronto-rubocop
-gem install pronto-scss
-gem install pronto-slim
-```
+docker-compose build pronto
 
 Create a `.rubocop.yml` in every repository with this content:
 
@@ -39,16 +33,16 @@ In your feature branch, simply run the following command to run the linters an a
 changes compared to master.
 
 ```bash
-pronto run
+~/Projects/style-guide/bin/pronto run
 
 # You can also just run one type of linter
-pronto run -r rubocop
-pronto run -r scss
+~/Projects/style-guide/bin/pronto run -r rubocop
+~/Projects/style-guide/bin/pronto run -r scss
 ```
 
 If you have not commited your changes yet, you can use the following command to lint
 all files that have changed compared to HEAD.
 
 ```bash
-pronto run --index
+~/Projects/style-guide/bin/pronto run --index
 ```
