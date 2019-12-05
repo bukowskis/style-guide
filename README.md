@@ -33,16 +33,16 @@ In your feature branch, simply run the following command to run the linters an a
 changes compared to master.
 
 ```bash
-~/Projects/style-guide/bin/pronto
+~/Projects/style-guide/bin/pronto run
 
 # You can also just run one type of linter
-~/Projects/style-guide/bin/pronto pronto run -r rubocop
-~/Projects/style-guide/bin/pronto pronto run -r scss
+~/Projects/style-guide/bin/pronto run -r rubocop
+~/Projects/style-guide/bin/pronto run -r scss
 ```
 
 If you have not commited your changes yet, you can use the following command to lint
 all files that have changed compared to HEAD.
 
 ```bash
-~/Projects/style-guide/bin/pronto pronto run --index
+~/Projects/style-guide/bin/pronto run --index
 ```
