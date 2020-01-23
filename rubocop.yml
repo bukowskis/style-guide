@@ -84,26 +84,6 @@ Naming/PredicateName:
 Naming/MethodParameterName:
   Enabled: false
 
-# This is a pure performance immprovement without any other positive side-effects.
-# We're willing to accept the performance penalty favoring code readability.
-Performance/CaseWhenSplat:
-  Enabled: false
-
-# Using `#flat_map` is just not very intuitive and used utterly seldom.
-# The performance penalty is minimal, so let us not forbid the usual `#map`
-Performance/FixedSize:
-  Enabled: false
-
-# Using `#reverse_each` is mentally a little more challenging than just
-# a simple `reverse.each`. The latter is not really much faster anyway.
-Performance/ReverseEach:
-  Enabled: false
-
-# Of course you should use `#delete` to remove characters from a String.
-# But we don't want to enforce you to use the non-intuitive `#tr` instead of `#gsub`
-Performance/StringReplacement:
-  Enabled: false
-
 # We follow https://robots.thoughtbot.com/lets-not
 # which increases example length.
 RSpec/ExampleLength:
