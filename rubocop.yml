@@ -42,6 +42,12 @@ Capybara/FeatureMethods:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
+# 80 characters can sometimes cause weird line breaks that make code less readable.
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - /**/*routes.rb
+
 # We usually catch those in code reviews and this metric is causing
 # a lot of noise and false positives.
 Metrics/AbcSize:
@@ -51,12 +57,6 @@ Metrics/AbcSize:
 # a lot of noise and false positives.
 Metrics/CyclomaticComplexity:
   Enabled: false
-
-# 80 characters can sometimes cause weird line breaks that make code less readable.
-Metrics/LineLength:
-  Max: 100
-  Exclude:
-    - /**/*routes.rb
 
 # Less fuss about specs, these are even turned off for rubocops own
 # specs.
