@@ -81,7 +81,7 @@ Naming/PredicateName:
 
 # This flags ** and _ as false positives and creates noise. We are careful enough with
 # naming during code reviews that we don't need this
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Enabled: false
 
 # This is a pure performance immprovement without any other positive side-effects.
