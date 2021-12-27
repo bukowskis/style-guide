@@ -1,0 +1,144 @@
+# A note on how to override the Rubocop defaults:
+# A note on how to override the Rubocop defaults:
+# -> Hashes are *merged* with upstream defaults.
+# -> Arrays are *overwritten* with our definition.
+
+require: rubocop-rspec
+
+AllCops:
+
+  # Keep this up-to-date with the Ruby version we use in Production.
+  TargetRubyVersion: 2.3
+
+  # By default Rubocop checks every .rb recursively inside the current directory.
+  # We want to exclude some files, so let's modify the original Array.
+  Exclude:
+
+    # Our list here will override the Rubocop default exclusion list.
+    # So we need to add the defaults first. You can find them here:
+    # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+    - vendor/**/*
+
+    # We don't care much about auto-generated files.
+    # There is no point in applying our style guide here.
+    - /**/db/schema.rb
+
+    # Migrations are run once and never touched again.
+    # Where there is no need for maintenance, there is no need for proper coding style.
+    - /**/db/migrate/*
+
+    # It so happens that we use Ruby in some Node projects.
+    # Let us avoid analyzing vendor ruby code that we do not control.
+    - node_modules/**/*
+
+# –––––––––––––––––––––––––––––––––––––––––––
+# Please try to keep this list alphabetically
+# –––––––––––––––––––––––––––––––––––––––––––
+
+# Using rspec methods such as 'it' for scenarios can result in weird phrasing.
+Capybara/FeatureMethods:
+  Description: Checks for consistent method usage in feature specs.
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+# 80 characters can sometimes cause weird line breaks that make code less readable.
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - /**/*routes.rb
+
+# We usually catch those in code reviews and this metric is causing
+# a lot of noise and false positives.
+Metrics/AbcSize:
+  Enabled: false
+
+# We usually catch those in code reviews and this metric is causing
+# a lot of noise and false positives.
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+# Less fuss about specs, these are even turned off for rubocops own
+# specs.
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.gemspec'
+    - spec/**/*.rb
+    - lib/**/spec/**/*.rb
+    - spec_legacy/**/*.rb
+    - config/routes.rb
+    - /**/*routes.rb
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*.rb
+    - lib/engines/**/spec/**/*.rb
+    - spec_legacy/**/*.rb
+
+Naming/PredicateName:
+  Enabled: false
+
+# This flags ** and _ as false positives and creates noise. We are careful enough with
+# naming during code reviews that we don't need this
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+# We follow https://robots.thoughtbot.com/lets-not
+# which increases example length.
+RSpec/ExampleLength:
+  Enabled: false
+
+# There is no compelling reason to limit `expect` to one per spec.
+# Especially in feature tests.
+RSpec/MultipleExpectations:
+  Enabled: false
+
+# UTF-8 ––––– in comments can improve readability ✔
+# It's allowed as method names, so maybe it should be allowed as comment.
+Style/AsciiComments:
+  Enabled: false
+
+# Top-level class documentation is cumbersome when starting/spiking a new project.
+# Generally our code should be understandable without comments.
+# Also, there are too many legacy classes without documentation that should not break rubocop.
+Style/Documentation:
+  Enabled: false
+
+# This is a "heads-up" for Ruby 3.0.
+# It only makes sense in Ruby >= 2.3, which we seldom use yet.
+# But if we do, we don't want this to break yet, it's not probably mature enough either.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Feature flipping functionality depends on global variables so we whitelist them
+Style/GlobalVars:
+  Enabled: true
+  AllowedVariables:
+    - $flipper
+    - $rollout
+
+# `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
+# It is not so obscure enough that we would forbid it, though.
+Style/LambdaCall:
+  Enabled: false
+
+# When dealing with a lot of numbers, it can be cumbersome to add a lot of `_`.
+# You may use `_` if you like, but it does not 100% add readability so we skip it.
+Style/NumericLiterals:
+  Enabled: false
+
+# Excessive use of `self.` is just noise. But we don't generally forbid using it.
+# See also https://github.com/bukowskis/style-guide/commit/9d1cad9d29c2064defd713386897591e8fb8f1be
+Style/RedundantSelf:
+  Enabled: false
+
+# This is a false positive when converting return values. To use this
+# for flow control would be questionable however that seems likely to
+# get noticed in code review.
+Style/DoubleNegation:
+  Enabled: false
