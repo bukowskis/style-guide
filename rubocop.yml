@@ -138,3 +138,8 @@ Style/RedundantSelf:
 # get noticed in code review.
 Style/DoubleNegation:
   Enabled: false
+
+# This is how we access redis since Redis.current is deprecated:
+GlobalVars:
+  AllowedVariables:
+    - $redis
