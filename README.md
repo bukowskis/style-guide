@@ -4,7 +4,7 @@ These are the coding style conventions we adhere to.
 
 ## Installation
 
-docker-compose build pronto
+docker compose build runner
 
 Create a `.rubocop.yml` in every repository with this content:
 
