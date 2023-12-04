@@ -44,7 +44,7 @@ Layout/EmptyLineAfterGuardClause:
 
 # 80 characters can sometimes cause weird line breaks that make code less readable.
 Layout/LineLength:
-  Max: 100
+  Max: 120
   Exclude:
     - /**/*routes.rb
 
