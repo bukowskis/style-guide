@@ -7,7 +7,7 @@ require: rubocop-rspec
 AllCops:
 
   # Keep this up-to-date with the Ruby version we use in Production.
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 3.2
 
   # By default Rubocop checks every .rb recursively inside the current directory.
   # We want to exclude some files, so let's modify the original Array.
