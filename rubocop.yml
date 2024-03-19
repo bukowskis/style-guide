@@ -118,6 +118,11 @@ Style/GlobalVars:
     - $flipper
     - $rollout
 
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: ruby19
+  EnforcedShorthandSyntax: never
+
 # `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
 # It is not so obscure enough that we would forbid it, though.
 Style/LambdaCall:
