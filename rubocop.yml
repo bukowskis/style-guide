@@ -118,6 +118,10 @@ Style/GlobalVars:
     - $flipper
     - $rollout
 
+# Prefer `-> {}` over `lambda {}` even for multiline lambdas.
+Style/Lambda:
+  EnforcedStyle: literal
+
 # `SomeClass.(some, arguments)` is considered "obscure" by Rubocop.
 # It is not so obscure enough that we would forbid it, though.
 Style/LambdaCall:
